@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean class="com.mumin.beans.Address" id="address">
+    <property name="adId" value="101"/>
+    <property name="village" value="Mohammadpur"/>
+    <property name="upazila" value="Mithamain"/>
+    <property name="district" value="Kishoreganj"/>
+    <property name="division" value="Dhaka"/>
+  </bean>
+
+  <bean class="com.mumin.beans.Employee" id="employeeOne" autowire="byName">
+    <property name="empId" value="97"/>
+    <property name="empName" value="Anowar Khan"/>
+    <!--<property name="address" ref="addressOne"/>-->  <!--Dependency injection achieved by ref-->
+  </bean>
+</beans>
